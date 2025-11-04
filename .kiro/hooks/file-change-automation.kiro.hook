@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "File Change Automation",
+  "description": "Automatically runs unit tests, updates documentation, and generates API schemas when relevant files are modified",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": []
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Files have been modified. Please perform the following tasks:\n1. Run unit tests for the affected components\n2. Update relevant documentation to reflect any changes\n3. Generate or update API schemas if API endpoints were modified\n\nAnalyze the changed files and execute these automation tasks accordingly."
+  }
+}
